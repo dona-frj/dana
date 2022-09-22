@@ -21,16 +21,17 @@ ol{
     align-items: flex-start;
  }
  
- .meetup-summary  .meetup-image{
-    margin-right: 2rem;
- }
+
  .meetup-image img{
     width: 8rem;
     height: 8rem;
     object-fit: cover;
-    /* border: 3px solid #cb82fb; */
+    border: 3px solid #cb82fb;
     border-radius :50%;
+    margin-right: 2rem;
+
 }
+
 .meetup-details h3{
     color: inherit;
     margin-top: 0;
@@ -40,12 +41,14 @@ ol{
 
 .meetup-details address{
     font-style: italic;
+   
 }
 
 .meetup-action{
     margin-top:  1.5rem;
     text-align: right;
 }
+
 .meetup-action .btn{
 background-color: #cb82fb;
 border-color: #cb82fb;
@@ -54,6 +57,7 @@ padding: 0.75rem;
 }
 
 .meetup-action .btn:hover{
-    background-color: #cb82fb;
-    border-color:#cb82fb;;
+    background-color: #b156ed;
+    border-color:#b156ed;
+    color: aliceblue;
 }

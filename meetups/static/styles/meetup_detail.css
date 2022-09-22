@@ -15,7 +15,6 @@ img #main_image {
     height: 10rem;
     object-fit: cover;
     align-items: center;
-    left: calc(50%-5rem);
     top: -5rem;
     border: 2px solid #350490;
     border-radius: 50%;
