@@ -1,4 +1,5 @@
 from http.client import HTTPResponse
+import imp
 from select import select
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -8,16 +9,19 @@ from .models import meetup
 
 
 def meetups_details(request, meetup_slug):
-    print(meetup_slug)
-    selected_meetup = {
-        'title': 'A First Meetups',
-        'description': 'this is the first meetup!'
-    }
-    return render(request, 'meetups/all-meetups.html',
-                  {
-                      'meetup_title': selected_meetup['title'],
-                      'meetup_description': selected_meetup['description']
-                  })
+    try:
+        selected_meetup = meetup.objects.get(slug=meetup_slug)
+        return render(request, 'meetups/all-meetups.html',
+                      {
+                          'meetup_found': True,
+                          'meetup_title': selected_meetup.title,
+                          'meetup_description': selected_meetup.description
+                      })
+
+    except Exception as exc:
+        return render(request, 'meetups/all-meetups.html', {
+            'meetup_found': False,
+        })
 
 
 def index(request):

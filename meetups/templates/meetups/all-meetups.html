@@ -9,8 +9,9 @@
 {% endblock %}
 
 {% block body%}
+{% if meetup_found%}
         <article>
-            <img src="" alt="" id="main_image">
+            <img src="" alt="image" id="main-image">
             <section id="location">
                 <h2>Meetup Location</h2>
                 <address> This meetup takes place in <span>LOCATION</span>(ADDRESS)</address>
@@ -21,7 +22,7 @@
                 <p> {{ meetup_description}}</p>
 
                 <footer>
-                    <p>need more details? please <a href="">contactt us</a></p>
+                    <p>need more details? please <a href="">contact us</a></p>
                 </footer>
             </section>
 
@@ -30,4 +31,8 @@
                 FORM
             </section>
         </article>
-{% endblock %}
+{% else %}
+<h2> no meetups found, sorry!</h2>
+{%endif%}
+
+{%endblock%}

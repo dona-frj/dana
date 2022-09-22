@@ -20,14 +20,16 @@ ol{
     display: flex;
     align-items: flex-start;
  }
- .meetup-image{
+ 
+ .meetup-summary  .meetup-image{
     margin-right: 2rem;
  }
-.meetup-image img{
+ .meetup-image img{
     width: 8rem;
     height: 8rem;
     object-fit: cover;
-    border: radius 50%;
+    /* border: 3px solid #cb82fb; */
+    border-radius :50%;
 }
 .meetup-details h3{
     color: inherit;

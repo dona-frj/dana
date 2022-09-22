@@ -45,3 +45,11 @@ button:hover, .btn:hover{
     color: #350490;
     font-weight: bold;
 }
+
+#main-image {
+    width: 30px;
+    height:30px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ccc3db;
+}
