@@ -11,6 +11,3 @@ class meetupadmin(admin.ModelAdmin):
 
 
 admin.site.register(meetup, meetupadmin)
-
-
-
