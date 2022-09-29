@@ -1,8 +1,4 @@
-from http.client import HTTPResponse
-import imp
-from select import select
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import meetup
 
 # Create your views here.
